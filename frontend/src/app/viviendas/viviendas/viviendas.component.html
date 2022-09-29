@@ -1,0 +1,54 @@
+<body>
+  <header>
+    <br>
+
+    &nbsp;&nbsp;
+  &nbsp;&nbsp;
+  &nbsp;&nbsp;
+    <button routerLink="/viviendas/vivienda-form" class="btn btn-primary">Añadir nueva Vivienda</button>
+  </header>
+
+
+  <router-outlet></router-outlet>
+
+  <main>
+
+    <section>
+      <div class=" row mb-2">
+        <div class="col-10 col-sm-10 col-md-3 col-lg-3 col-xl-3">PROVINCIA</div>
+        <div class="col-10 col-sm-10 col-md-3 col-lg-3 col-xl-3">CIUDAD</div>
+        <div class="col-10 col-sm-10 col-md-3 col-lg-3 col-xl-3">DIRECCION</div>
+
+
+      </div>
+    </section>
+    <div *ngFor="let vivienda of viviendas">
+      <app-vivienda-item [vivienda]="vivienda" (viviendaSeleccionada)="verDatos($event)" (viviendaEliminar)="onViviendaEliminar($event)"></app-vivienda-item>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalVivienda" tabindex="-1" role="dialog" aria-labelledby="datosVivienda"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="datosVivienda">Datos completos de la vivienda:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-vivienda [vivienda]="viviendaVerDatos" (viviendaEliminar)='onViviendaEliminar($event)'></app-vivienda>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"  >Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+    </body>
+
+
+    <!-- onClick="window.location.reload()" -->

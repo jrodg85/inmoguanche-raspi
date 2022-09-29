@@ -1,0 +1,24 @@
+
+<main>
+  <section>
+
+    <div class="contenedor-uno row mb-2 ">
+
+      <div class="col-1"></div>
+      <div class=" col-10 col-sm-10 col-md-3 col-lg-3 col-xl-3  "><a class="" data-toggle="modal"
+        data-target="#modalVivienda" (click)='viviendaSeleccionada.emit(vivienda)'>{{vivienda.provincia }}</a></div>
+      <div class=" col-10 col-sm-10 col-md-3 col-lg-3 col-xl-3 "><a class="" data-toggle="modal"
+        data-target="#modalVivienda" (click)='viviendaSeleccionada.emit(vivienda)'>{{vivienda.ciudad | uppercase}}</a>
+      </div>
+      <div class=" col-10 col-sm-10 col-md-3 col-lg-3 col-xl-3 "><a class="" data-toggle="modal"
+        data-target="#modalVivienda" (click)='viviendaSeleccionada.emit(vivienda)'>{{vivienda.direccion | uppercase}}</a>
+      </div>
+      <div class=" col-10 col-sm-10 col-md-2 col-lg-2 col-xl-2 ">
+        <button class="btn btn-info" routerLink="/ofertas/ofertas-vivienda/{{vivienda.idVivienda}}">Ofertas de Vivienda</button>
+      </div>
+
+    </div>
+    <br>
+
+  </section>
+</main>

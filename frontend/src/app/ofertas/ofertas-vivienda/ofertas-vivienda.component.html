@@ -1,0 +1,103 @@
+<main>
+
+
+  <div class="contenedor-uno row col-12 container-fluid">
+  <h4>DETALLES DE VIVIENDA {{direccion}}</h4>
+  </div>
+
+  <router-outlet></router-outlet>
+
+  <div class="contenedor-dos row container-fluid">
+    <div class=" col-12 tabla-de-vivienda ">
+      <div class="contenedor-tres col-12 ">
+        <div class="col-4 ">
+        </div>
+        <div class="col-2 dato  " *ngIf="provincia">Provincia:
+        </div>
+        <div class="col-6 dato   ">&nbsp;&nbsp;&nbsp;&nbsp;{{ provincia }}
+        </div>
+      </div>
+      <div class="linea-de-separacion  col-12 border-bottom border-dark">
+      </div>
+      <!--hasta aqui provincia-->
+      <div class="contenedor-tres  col-12 ">
+        <div class="col-4 ">
+        </div>
+        <div class=" dato col-2 " *ngIf="ciudad">Ciudad:
+        </div>
+        <div class=" dato col-6 ">&nbsp;&nbsp;&nbsp;&nbsp;{{ ciudad }}
+        </div>
+
+      </div>
+      <div>
+        <div class="linea-de-separacion  col-12 border-bottom border-dark">
+        </div>
+      </div>
+      <!--hasta aqui ciudad-->
+
+
+      <div class="contenedor-tres  col-12 ">
+        <div class="col-4 ">
+        </div>
+        <div class="dato col-2 " *ngIf="habitaciones">Habs.:
+        </div>
+        <div class="dato col-6 ">&nbsp;&nbsp;&nbsp;&nbsp;{{ habitaciones }}
+        </div>
+      </div>
+      <div>
+        <div class="linea-de-separacion  col-12 border-bottom border-dark">
+        </div>
+      </div>
+      <!--hasta aqui CP-->
+      <div class="contenedor-tres  col-12 ">
+        <div class="col-4 ">
+        </div>
+        <div class="dato col-2 " *ngIf="banyos">Baños:
+        </div>
+        <div class="dato col-6 ">&nbsp;&nbsp;&nbsp;&nbsp;{{ banyos }}
+        </div>
+      </div>
+      <div>
+        <div class="linea-de-separacion  col-12 border-bottom border-dark">
+        </div>
+      </div>
+      <!--hasta aqui ref catastral-->
+      <div class="contenedor-tres  col-12 container-fluid">
+        <div class="col-4 ">
+        </div>
+        <div class="dato col-2 " *ngIf="superficie">Superficie:
+        </div>
+        <div class="dato col-6 ">&nbsp;&nbsp;&nbsp;&nbsp;{{ superficie }} m<sup>2</sup>
+        </div>
+      </div>
+      <div>
+        <div class="linea-de-separacion  col-12 border-bottom border-dark">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div  class="contenedor-cuatro row col-12">
+  <br>
+  </div>
+  <div class="contenedor-cuatro col-12 row">
+    <button type="button" routerLink="/ofertas/ofertas-form/{{id}}/1" class="col-3 boton-añadir-oferta  btn btn-success container-fluid"><fa-icon class=" icono-fa-borrar " [icon]="nuevo"></fa-icon> &nbsp; Alquiler </button>
+    <button type="button" routerLink="/ofertas/ofertas-form/{{id}}/2" class="col-3 boton-añadir-oferta  btn btn-success container-fluid"><fa-icon class=" icono-fa-borrar " [icon]="nuevo"></fa-icon> &nbsp; Venta </button>
+    <br>
+  </div>
+
+
+
+
+
+
+
+
+  <div *ngFor="let oferta of todasOfertas">
+    <app-ofertas-vivienda-item class="contenedor-oferta-item" [oferta]="oferta" (ofertaEliminar)="onOfertaEliminar($event)"
+      (ofertaSeleccionada)="verOferta($event)"></app-ofertas-vivienda-item>
+  </div>
+  <div class="contenedor-cuatro col-12 row">
+    <button type="button" routerLink="/viviendas/" class="boton-interior  col-3 boton-añadir-oferta  btn btn-warning container-fluid"><fa-icon class=" icono-fa-volver " [icon]="volver"></fa-icon> &nbsp; Volver </button>
+    <br>
+  </div>
+</main>

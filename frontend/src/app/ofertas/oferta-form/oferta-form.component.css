@@ -1,0 +1,104 @@
+
+.contenedor-uno{
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.contenedor-dos{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:bolder ;
+  padding: 0px;
+  margin: 0px;
+}
+
+.contenedor-tres{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.campo{
+  text-align: right;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.dato{
+  text-align:left;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+}
+
+.linea-de-separacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+;
+
+}
+.boton-añadir-oferta {
+  position: middle;
+  display:flex;
+  justify-content:center;
+  margin: 20px;
+  align-items:center;
+}
+
+.contenedor-cuatro{
+  background-color: rgb(143, 143, 143);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.contenedor-oferta-item{
+  background-color: rgb(143, 143, 143);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.contenedor-cinco{
+  background-color: rgb(143, 143, 143);
+
+}
+
+.hidden{
+visibility: hidden;
+
+
+}
+
+
+
+.icono-fa-volver{
+
+  cursor: pointer;
+  color: yellow;
+}
+
+
+
+.icono-fa-aceptar{
+
+  cursor: pointer;
+  color: greenyellow;
+
+  }

@@ -1,0 +1,119 @@
+
+<div class="container-fluid  " [ngClass]="{alquiler: oferta.tipo===1, venta:oferta.tipo===2}" (ngSubmit)="onSubmit()">
+  <div class="col-12 row" *ngIf="oferta.tipo ===2">
+
+
+
+    <div class=" row col-12 container-fluid">
+      <div class="col-4 ">
+      </div>
+      <h5 class="col-2 estilo-bold" >&nbsp;&nbsp;Venta      </h5>
+      <div class="col-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a data-bs-toggle="modal" data-bs-target="#modalModificar" (click)="modificarOferta(oferta) ">
+          &nbsp;<fa-icon class=" icono-fa-editar fa-2x" [icon]="modificar"></fa-icon>&nbsp;
+          </a>
+          <a   type="button" (click)="borrarOferta(oferta.idOferta)">
+          &nbsp;&nbsp;
+          <fa-icon class=" icono-fa-borrar fa-2x" [icon]="trash"></fa-icon>
+          &nbsp;
+          </a>
+        </div>
+
+
+
+
+    </div>
+  </div>
+  <div class="col-12 row" *ngIf="oferta.tipo ===1">
+
+
+    <div class=" row col-12 container-fluid">
+      <div class="col-4 ">
+      </div>
+      <h5 class="col-2 estilo-bold" >&nbsp;&nbsp;Alquiler      </h5>
+      <div class="col-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a data-bs-toggle="modal" data-bs-target="#modalModificar" (click)="modificarOferta(oferta) ">
+        &nbsp;<fa-icon class=" icono-fa-editar fa-2x" [icon]="modificar"></fa-icon>&nbsp;
+        </a>
+        <a   type="button" (click)="borrarOferta(oferta.idOferta)">
+        &nbsp;&nbsp;
+        <fa-icon class=" icono-fa-borrar fa-2x" [icon]="trash"></fa-icon>
+        &nbsp;
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="contenedor-tres col-12 " *ngIf="oferta.tipo ===1">
+
+    <div class="col-4 ">
+    </div>
+    <div class="col-2 dato  ">Precio
+    </div>
+    <div class="col-6 dato   ">&nbsp;&nbsp;&nbsp;&nbsp;{{oferta.precioAlquilerMensual}} €/mes
+    </div>
+  </div>
+  <div class="contenedor-tres col-12 linea-de-separacion border-bottom border-dark" *ngIf="oferta.tipo ===1">
+
+    <div class="col-4 ">
+    </div>
+    <div class="col-2 dato  ">Meses fianza
+    </div>
+    <div class="col-6 dato   ">&nbsp;&nbsp;&nbsp;&nbsp;{{oferta.mesesFianza}}
+    </div>
+
+    <br>
+
+
+
+
+
+
+  </div>
+
+  <div class="contenedor-cuatro col-12 linea-de-separacion border-bottom border-dark" *ngIf="oferta.tipo ===2">
+
+
+    <div class="col-4 ">
+    </div>
+    <div class="col-2 dato  ">Precio
+    </div>
+    <div class="col-6 dato   ">&nbsp;&nbsp;&nbsp;&nbsp;{{oferta.precioDeVenta}} €
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+<!-- <section>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a data-bs-toggle="modal" data-bs-target="#modalModificar" (click)="modificarOferta(oferta) ">
+    &nbsp;<fa-icon class=" fa-2x" [icon]="modificar"></fa-icon>&nbsp;
+  </a>
+
+
+  <a   type="button" (click)="borrarOferta(oferta.idOferta)">
+    &nbsp;&nbsp;
+    <fa-icon class=" fa-2x" [icon]="trash"></fa-icon>
+    &nbsp;
+  </a>
+</section> -->
+
+  <!-- routerLink="/oferta/edicion-ofertas/{{oferta.idOferta}}/{{oferta.tipo}}" -->
+
+
+  <!-- ofertaSeleccionada.emit(oferta)  -->

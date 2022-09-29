@@ -1,0 +1,83 @@
+
+.contenedor-uno{
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-dos{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:bolder ;
+}
+
+.contenedor-tres{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.campo{
+  text-align: right;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.dato{
+  text-align:left;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+}
+
+.linea-de-separacion{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+;
+
+}
+.boton-añadir-oferta {
+  position: middle;
+  display:flex;
+  justify-content:center;
+  margin: 20px;
+  align-items:center;
+}
+
+.contenedor-cuatro{
+  background-color: rgb(143, 143, 143);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.icono-fa-editar{
+
+cursor: pointer;
+color: rgb(38, 223, 247);
+
+}
+
+.icono-fa-borrar{
+
+  cursor: pointer;
+  color: rgb(161, 66, 66);
+
+  }
+
+.estilo-bold{
+ font-weight: bolder;
+
+}
